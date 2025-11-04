@@ -1,0 +1,11 @@
+.console-sim { display:flex; flex-direction:column; height:100%; gap:10px; }
+.console-header { padding:6px 8px; border-bottom:1px solid rgba(255,255,255,0.03); }
+.console-title { font-weight:700; color:#c084fc; }
+.console-sub { color:#dbeafe; font-size:0.95rem; margin-top:6px; }
+
+.console-output { flex:1; background: rgba(0,0,0,0.25); padding:12px; border-radius:8px; font-family:monospace; overflow:auto; color:#e6eefc; }
+.console-line { margin-bottom:6px; white-space:pre-wrap; }
+
+.console-input { display:flex; gap:8px; margin-top:8px; }
+.console-input input { flex:1; padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.03); color:#fff; }
+.console-input button { background: linear-gradient(90deg,#7c3aed,#a78bfa); padding:8px 12px; border-radius:8px; border:none; color:white; cursor:pointer; }

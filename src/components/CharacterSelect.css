@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap");
+
+.character-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a001f 0%, #20004f 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.character-content {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.character-content h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d0bfff;
+}
+
+.character-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.character-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  width: 220px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.character-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #9b4dff;
+}
+
+.character-card.selected {
+  border: 2px solid #a366ff;
+  box-shadow: 0 0 25px #b07cff;
+}
+
+.character-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.character-name {
+  font-weight: 600;
+  color: #e5d4ff;
+}
+
+.start-button {
+  background: linear-gradient(90deg, #5b00d4, #9b4dff);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 40px;
+}
+
+.start-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #9b4dff;
+}
+
+.footer {
+  font-size: 0.9rem;
+  color: #d0bfff;
+  padding: 10px 0;
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

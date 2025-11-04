@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap");
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #0a001f 0%, #20004f 0%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-container {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 20px 0;
+  background: linear-gradient(90deg, #3a0078, #9b4dff);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.game-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  color: #d5c8ff;
+  margin-bottom: 20px;
+}
+
+.banner {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #4b00ff;
+  margin-bottom: 30px;
+}
+
+.start-button {
+  background: linear-gradient(90deg, #5b00d4, #9b4dff);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 40px;
+}
+
+.start-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #9b4dff;
+}
+
+.card-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #9b4dff;
+}
+
+.card-icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  font-size: 0.9rem;
+  color: #d0c6e9;
+  padding: 10px 0;
+  background:#3a0078; 
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

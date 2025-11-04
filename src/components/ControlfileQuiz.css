@@ -1,0 +1,230 @@
+/* Contenedor general del quiz */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  background: linear-gradient(180deg, #0a001f 0%, #20004f 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Título principal */
+.quiz-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00e6b8;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 230, 184, 0.4);
+}
+
+/* Distribución general de la pregunta */
+.question-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+  max-width: 1000px;
+  gap: 2rem;
+}
+
+/* Personaje al lado izquierdo */
+.character-side {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.char-avatar {
+  width: 220px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Bocadillo de diálogo */
+.speech-bubble {
+  position: absolute;
+  top: -30px;
+  right: -120px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 15px 20px;
+  width: 200px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  animation: fadeIn 0.5s ease forwards;
+  z-index: 10;
+}
+
+
+/* Triángulo del bocadillo */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 40%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #fff;
+}
+
+/* Columna de la pregunta y opciones */
+.question-side {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.question-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Opciones del quiz */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  background: #232931;
+  color: #fff;
+  border: 2px solid #00e6b8;
+  border-radius: 12px;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+  background: #00e6b8;
+  color: #000;
+  transform: scale(1.02);
+}
+
+.option-btn.selected {
+  background: #00e6b8;
+  color: #000;
+  border-color: #00ffcc;
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.7);
+}
+
+/* Botones inferiores */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.submit-btn,
+.retry-btn,
+.back-btn {
+  background: #00e6b8;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover,
+.retry-btn:hover,
+.back-btn:hover {
+  background: #00ffcc;
+  transform: scale(1.05);
+}
+
+/* Bloque de resultado final */
+.result-block {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.result-title {
+  font-size: 1.8rem;
+  color: #00e6b8;
+  margin-bottom: 1rem;
+}
+
+.end-phrase {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Caja de pistas */
+.hint-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #ffca3a;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #ffe;
+  font-size: 0.95rem;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Animaciones */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .question-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .speech-bubble {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .char-avatar {
+    width: 160px;
+  }
+}
